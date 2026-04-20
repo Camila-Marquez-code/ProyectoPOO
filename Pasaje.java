@@ -23,6 +23,9 @@ public class Pasaje {
 
     public Pasajero getPasajero() {
         return pasajero;
+    }
 
+    public Venta getVenta() {
+        return venta;
     }
 }
