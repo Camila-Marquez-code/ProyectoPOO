@@ -1,19 +1,20 @@
 public class Nombre {
+
     private Tratamiento tratamiento;
     private String nombre;
     private String apellidoPaterno;
     private String apellidoMaterno;
 
-    public Nombre(String nombre, String apellidoPaterno, String apellidoMaterno) {
+    public Nombre(Tratamiento tratamiento, String nombre, String apellidoPaterno, String apellidoMaterno) {
         this.tratamiento = tratamiento;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
-        this.tratamiento = tratamiento;
 
     }
 
     public Tratamiento getTratamiento() {
+
         return tratamiento;
     }
 
@@ -48,6 +49,19 @@ public class Nombre {
     @Override
     public String toString() {
         return "Tratamiento"+ tratamiento + "Nombre:" + nombre + "Apellido Paterno: " + apellidoPaterno + "Apellido Materno: "+  apellidoMaterno;
+
+    }
+
+    @Override
+    public boolean equals(Object otro) {
+        if (this == otro) return true;
+        if (otro == null || getClass() != otro.getClass()) return false;
+
+        Nombre n = (Nombre) otro;
+
+        return nombre.equals(n.nombre) &&
+                apellidoPaterno.equals(n.apellidoPaterno) &&
+                apellidoMaterno.equals(n.apellidoMaterno);
 
     }
 
