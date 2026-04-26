@@ -1,3 +1,5 @@
+//Tomás Meza
+
 public class Persona {
 
     private IdPersona idPersona;
