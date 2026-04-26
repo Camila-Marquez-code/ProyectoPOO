@@ -28,8 +28,8 @@ public class SistemaVentaPasajes {
         }
 
 
-        Cliente clientee = new Cliente(id, nom, fono, email);
-        clientes.add(clientee);
+        Cliente cliente = new Cliente(id, nom, email);
+        clientes.add(cliente);
         return true;
     }
 
@@ -62,8 +62,8 @@ public class SistemaVentaPasajes {
             return false;
         }
         Viaje viajee = new Viaje(fecha, hora, precio, busEncontrado);
-            viajes.add(viajee);
-            return true;
+        viajes.add(viajee);
+        return true;
     }
 
     public boolean iniciaVenta (String idDoc, TipoDocumento tipo, LocalDate fechaVenta, IdPersona idCliente){
@@ -102,18 +102,7 @@ public class SistemaVentaPasajes {
         if (viaje == null){
             return new String[0][0];
         }
-        boolean[] asientos = viaje.getAsientos();
-        String[][] resultado = new String[asientos.length][2];
-        for (int i = 0; i < asientos.length; i++) {
-            resultado[i][0] = String.valueOf(i);
-            if (asientos[i]){
-                resultado[i][1] = "Ocupado";
-            } else {
-                resultado[i][1] = "Libre";
-            }
-        }
-
-        return resultado;
+        return viaje.getAsientos();
     }
 
     public int getMontoVenta (String idDocumento, TipoDocumento tipo){
@@ -255,16 +244,16 @@ public class SistemaVentaPasajes {
         return null;
     }
     private Pasajero  findPasajero (IdPersona idPersona){
-            for (int i = 0; i < pasajeros.size(); i++) {
+        for (int i = 0; i < pasajeros.size(); i++) {
 
-                Pasajero pasajero = pasajeros.get(i);
+            Pasajero pasajero = pasajeros.get(i);
 
-                if (pasajero.getId().getValor().equals(idPersona.getValor())) {
-                    return pasajero;
-                }
+            if (pasajero.getId().getValor().equals(idPersona.getValor())) {
+                return pasajero;
             }
-            return null;
         }
+        return null;
+    }
 
 
 }
