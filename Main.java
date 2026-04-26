@@ -79,11 +79,15 @@ public class Main {
         if (tipoId == 1){
             System.out.print("RUT [11.111.111.-1]: ");
             String rutTexto = sc.nextLine();
-            idPersona = Rut.of(rutTexto);
+            rutTexto = rutTexto.replace(".", "");
+            String[] separado = rutTexto.split("-");
+            int numero = Integer.parseInt(separado[0]);
+            char dv = separado[1].charAt(0);
+            idPersona = Rut.of(numero, dv);
         } else {
-            System.out.print("Pasaporte [solo texto]: ");
+            System.out.print("Pasaporte [Solo texto]: ");
             String pasaporteTexto = sc.nextLine();
-            idPersona = Pasaporte.of(pasaporteTexto);
+            idPersona = Pasaporte.of(pasaporteTexto, "Chilena");
         }
 
         System.out.print("Tratamiento: Sr [1] o Sra [2]: ");
@@ -207,13 +211,17 @@ public class Main {
 
         IdPersona idPersona;
         if (tipoId == 1){
-            System.out.print("RUT: ");
+            System.out.print("RUT [11.111.111.-1]: ");
             String rutTexto = sc.nextLine();
-            idPersona = Rut.of(rutTexto);
+            rutTexto = rutTexto.replace(".", "");
+            String[] separado = rutTexto.split("-");
+            int numero = Integer.parseInt(separado[0]);
+            char dv = separado[1].charAt(0);
+            idPersona = Rut.of(numero, dv);
         } else {
-            System.out.print("Pasaporte: ");
+            System.out.print("Pasaporte [Solo texto]: ");
             String pasaporteTexto = sc.nextLine();
-            idPersona = Pasaporte.of(pasaporteTexto);
+            idPersona = Pasaporte.of(pasaporteTexto, "Chilena");
         }
 
         //No se imprime el nombre del cliente ya que no existe algo como getNombreCliente en SistemaVentaPasajes
@@ -298,9 +306,13 @@ public class Main {
             sc.nextLine();
 
             if (tipoId == 1){
-                System.out.print("RUT: ");
+                System.out.print("RUT [11.111.111.-1]: ");
                 String rutTexto = sc.nextLine();
-                idPersona = Rut.of(rutTexto, );
+                rutTexto = rutTexto.replace(".", "");
+                String[] separado = rutTexto.split("-");
+                int numero = Integer.parseInt(separado[0]);
+                char dv = separado[1].charAt(0);
+                idPersona = Rut.of(numero, dv);
             } else {
                 System.out.print("Pasaporte: ");
                 String pasaporteTexto = sc.nextLine();
