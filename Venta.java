@@ -33,7 +33,7 @@ public class Venta {
     }
 
     public void createPasaje (int asiento, Viaje viaje, Pasajero pasajero) {
-        Pasaje nuevo = new Pasaje(asiento, viaje, pasajero);
+        Pasaje nuevo = new Pasaje(asiento, viaje, pasajero, this);
         pasajes.add(nuevo);
         viaje.addPasaje(nuevo);
 
