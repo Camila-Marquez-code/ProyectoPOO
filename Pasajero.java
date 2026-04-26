@@ -1,3 +1,4 @@
+//Camila Márquez Burgos
 public class Pasajero {
     private Nombre nomContacto;
     private String fonoContacto;
