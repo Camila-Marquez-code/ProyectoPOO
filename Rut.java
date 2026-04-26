@@ -1,6 +1,4 @@
-package Proyecto;
-
-public class Rut {
+public class Rut implements IdPersona {
     private int numero;
     private char dv;
 
