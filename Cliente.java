@@ -1,5 +1,3 @@
-package sistema;
-
 public class Cliente extends Persona {
     private String email;
 
@@ -14,5 +12,5 @@ public class Cliente extends Persona {
     public void setEmail(String email) {
         this.email = email;
     }
-    //Aun por terminar y mejorar
+
 }
