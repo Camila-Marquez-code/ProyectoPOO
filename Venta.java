@@ -1,7 +1,6 @@
-package use;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Venta {
     private String idDocumento;
@@ -10,13 +9,12 @@ public class Venta {
     private Cliente cliente;
     private List<Pasaje> pasajes;
 
-    public Venta (String id, TipoDocumento tipo, LocalDate fec, Cliente cli) {
+    public Venta (String id, TipoDocumento tipo, LocalDate fecha, Cliente cliente) {
         this.idDocumento = id;
         this.tipo = tipo;
-        this.fecha = fec;
-        this.cliente = cli;
+        this.fecha = fecha;
+        this.cliente = cliente;
         this.pasajes = new ArrayList<>();
-
     }
 
     public String getIdDocumento() {
@@ -35,10 +33,15 @@ public class Venta {
     public void createPasaje (int asiento, Viaje viaje, Pasajero pasajero) {
         Pasaje nuevo = new Pasaje(asiento, viaje, pasajero);
         pasajes.add(nuevo);
+        viaje.addPasaje(nuevo);
 
     }
-
-    //Aun por terminar y mejorar
-
+    public int getMonto() {
+        int total = 0;
+        for (Pasaje p : pasajes) {
+            total += p.getViaje().getBus().getNroAsientos(); // simplificado
+        }
+        return total;
+    }
 
 }
