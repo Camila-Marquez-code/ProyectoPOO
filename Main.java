@@ -293,7 +293,6 @@ public class Main {
             int asiento = asientos[i];
             System.out.println("--> Asiento: " + asiento);
             System.out.print(" ");
-
             System.out.print("-->  Rut [1] o Pasaporte [2]: ");
             tipoId = sc.nextInt();
             sc.nextLine();
@@ -301,11 +300,11 @@ public class Main {
             if (tipoId == 1){
                 System.out.print("RUT: ");
                 String rutTexto = sc.nextLine();
-                idPersona = Rut.of(rutTexto);
+                idPersona = Rut.of(rutTexto, );
             } else {
                 System.out.print("Pasaporte: ");
                 String pasaporteTexto = sc.nextLine();
-                idPersona = Pasaporte.of(pasaporteTexto);
+                idPersona = Pasaporte.of(pasaporteTexto, "Chilena");
             }
 
             ids[i] = idPersona;

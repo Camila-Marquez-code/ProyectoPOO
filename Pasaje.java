@@ -2,6 +2,9 @@
 public class Pasaje {
     private long numero;
     private int asiento;
+    private Viaje viaje;
+    private Pasajero pasajero;
+    private Venta venta;
 
     public Pasaje(int asiento, Viaje viaje, Pasajero pasajero, Venta venta) {
         this.asiento = asiento;
