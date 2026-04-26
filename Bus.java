@@ -1,10 +1,11 @@
-package Proyecto;
+import java.util.*;
 
 public class Bus {
     private String patente;
     private String marca;
     private String modelo;
     private int nroAsientos;
+    private List<Viaje> viajes = new ArrayList<Viaje>();
 
     public Bus(String patente, int nroAsientos) {
         this.patente = patente;
@@ -31,11 +32,7 @@ public class Bus {
         this.modelo = modelo;
     }
 
-    public int getnroAsientos(){
-        return nroAsientos;
-    }
-
     public void addViaje(Viaje viaje){
-        this.viaje = viaje;
+        viajes.add(viaje);
     }
 }
