@@ -295,10 +295,9 @@ public class Main {
             System.out.print(" ");
 
             System.out.print("-->  Rut [1] o Pasaporte [2]: ");
-            int tipoId = sc.nextInt();
+            tipoId = sc.nextInt();
             sc.nextLine();
 
-            IdPersona idPersona;
             if (tipoId == 1){
                 System.out.print("RUT: ");
                 String rutTexto = sc.nextLine();
@@ -346,7 +345,7 @@ public class Main {
                 System.out.println("Cliente ya existe");
             }
 
-            boolean creado = sistema.vendePasaje(idDoc, fechaViaje, hora, patBus, asiento, idPersona);
+            creado = sistema.vendePasaje(idDoc, fechaViaje, hora, patBus, asiento, idPersona);
             if (creado) {
                 System.out.println("Creado exitosamente!!");
             } else {
