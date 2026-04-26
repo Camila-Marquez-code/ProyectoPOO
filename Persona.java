@@ -1,5 +1,3 @@
-package sistema;
-
 public class Persona {
 
     private IdPersona idPersona;
@@ -7,14 +5,10 @@ public class Persona {
     private String telefono;
 
 
-    public Persona(IdPersona id, Nombre nombre) {
-        this.idPersona = id;
-        this.nombreCompleto = nombre;
+    public Persona(IdPersona idPersona, Nombre nombreCompleto) {
+        this.idPersona = idPersona;
+        this.nombreCompleto = nombreCompleto;
     }
-
-    public Persona() {
-    }
-
 
     public IdPersona getIdPersona() {
         return idPersona;
@@ -22,6 +16,7 @@ public class Persona {
     public Nombre getNombreCompleto() {
         return nombreCompleto;
     }
+
     public void setNombreCompleto (Nombre nombreCompleto) {
         this.nombreCompleto = nombreCompleto;
     }
@@ -36,9 +31,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{idPersona=" + idPersona +
-                ", nombreCompleto=" + nombreCompleto +
-                ", telefono=" + telefono + "}";
+        return "Persona (idPersona: " + idPersona + ", nombre Completo: " + nombreCompleto + ", telefono: " + telefono + ")";
     }
     @Override
     public boolean equals(Object otro) {
@@ -48,6 +41,5 @@ public class Persona {
         Persona persona = (Persona) otro;
         return idPersona.equals(persona.idPersona);
     }
-
-    //Aun por terminar y mejorar
+    
 }
