@@ -1,7 +1,11 @@
 //Camila Márquez Burgos
-public class Pasajero {
+public class Pasajero extends Persona {
     private Nombre nomContacto;
     private String fonoContacto;
+
+    public Pasajero(IdPersona idPersona, Nombre nombre) {
+        super(idPersona, nombre);
+    }
 
     public Nombre getNomContacto() {
         return nomContacto;
@@ -19,3 +23,4 @@ public class Pasajero {
         this.fonoContacto = fonoContacto;
     }
 }
+

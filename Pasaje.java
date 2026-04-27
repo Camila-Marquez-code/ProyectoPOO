@@ -13,8 +13,8 @@ public class Pasaje {
         this.venta = venta;
     }
 
-    public long getNumero() {
-        return numero;
+    public int getNumero() {
+        return (int) numero;
     }
 
     public int getAsiento() {
