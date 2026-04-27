@@ -35,13 +35,14 @@ public class Persona {
     public String toString() {
         return "Persona (idPersona: " + idPersona + ", nombre Completo: " + nombreCompleto + ", telefono: " + telefono + ")";
     }
-    @Override
-    public boolean equals(Object otro) {
-        if (this == otro) return true;
-        if (otro == null || getClass() != otro.getClass()) return false;
 
-        Persona persona = (Persona) otro;
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        Persona persona = (Persona) obj;
         return idPersona.equals(persona.idPersona);
     }
-    
+
 }
