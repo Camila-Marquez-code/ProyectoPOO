@@ -1,38 +1,45 @@
-import java.util.*;
+//Juan José Henríquez Vergara
+import java.util.ArrayList;
 
 public class Bus {
     private String patente;
     private String marca;
     private String modelo;
     private int nroAsientos;
-    private List<Viaje> viajes = new ArrayList<Viaje>();
+    private ArrayList<Viaje> viajes;
 
     public Bus(String patente, int nroAsientos) {
         this.patente = patente;
         this.nroAsientos = nroAsientos;
+        this.viajes = new ArrayList<Viaje>();
     }
 
-    public String getPatente(){
+    public String getPatente() {
         return patente;
     }
 
-    public int getNroAsientos(){
-        return nroAsientos;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setmarca(String marca){
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
-    public String getmodelo(){
+    public String getModelo() {
         return modelo;
     }
 
-    public void setmodelo(String modelo){
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
-    public void addViaje(Viaje viaje){
+    public int getNroAsientos() {
+        return nroAsientos;
+    }
+
+    public void addViaje(Viaje viaje) {
         viajes.add(viaje);
     }
+
 }
