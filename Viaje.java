@@ -10,20 +10,23 @@ public class Viaje {
     private int precio;
     private Bus bus;
     private ArrayList<Pasaje> pasajes;
+    private Arraylist<Venta> ventas;
+    private ArrayList<Tripulante> tripulantes;
     private int duracion;
     private Auxiliar auxiliar;
     private Conductor conductor;
     private Terminal sale;
     private Terminal llega;
 
-    //CORROBORAR SOBRE SALE Y LLEGA
 
-    public Viaje(LocalDate fecha, LocalTime hora, int precio, Bus bus, int duracion, Auxiliar auxiliar, Conductor conductor) {
+    public Viaje(LocalDate fecha, LocalTime hora, int precio, Bus bus, int duracion, Auxiliar auxiliar, Conductor conductor, Terminal sale, Terminal llega) {
         this.fecha = fecha;
         this.hora = hora;
         this.precio = precio;
         this.bus = bus;
         this.pasajes = new ArrayList<Pasaje>();
+        this.ventas = new ArrayList<Venta>();
+        this.tripulantes = new ArrayList<Tripulante>();
     }
 
     public LocalDate getFecha() {
@@ -47,7 +50,7 @@ public class Viaje {
     }
 
     public LocalDateTime getFechaHoraTermino() {
-        //DESARROLLAR
+        return LocalDateTime.of(fecha, hora).plusMinutes(duracion);
     }
 
     public Bus getBus() {
@@ -101,22 +104,26 @@ public class Viaje {
     }
 
     public Venta[] getVentas() {
-        //DESARROLLAR
+      return ventas.toArray(new Venta[0]);
     }
 
     public void addConductor(Conductor conductor) {
-        //Desarrollar
+        if (this.conductores.size() < 2) {
+            this.conductores.add(conductor);
+        } else {
+            System.out.println("ERROR! Un viaje no puede tener mas de dos conductores");
+        }
     }
 
     public Tripulante[] getTripulantes() {
-         //desarrollar
+         return tripulantes.toArray(new Tripulante[0]);
     }
 
     public Terminal getTerminalLlegada() {
-        //Desarrollar
+        return Terminal llega;
     }
 
     public Terminal getTerminalSalida() {
-        //Desarrollar
+        return Terminal sale;
     }
 }
