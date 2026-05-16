@@ -1,10 +1,15 @@
 //Camila Valeska Márquez Burgos
+
+import java.util.ArrayList;
+
 public class Tripulante extends Persona {
     private Direccion direccion;
+    private ArrayList<Viaje> viajes;
 
     public Tripulante(IdPersona idPersona, Nombre nombre, Direccion direccion) {
         super(idPersona, nombre);
         this.direccion = direccion;
+        this.viajes = new ArrayList<Viaje>();
     }
 
     public Direccion getDireccion() {
@@ -16,10 +21,10 @@ public class Tripulante extends Persona {
     }
 
     public void addViaje(Viaje viaje) {
-        //Desarrollar
+        viajes.add(viaje);
     }
 
     public int getNroViaje() {
-        //Desarrollar
+        return viaje.size();
     }
 }

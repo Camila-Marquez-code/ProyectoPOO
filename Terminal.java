@@ -1,11 +1,18 @@
 //Camila Valeska Márquez Burgos
+
+import java.util.ArrayList;
+
 public class Terminal {
     private String nombre;
     private Direccion direccion;
+    private ArrayList<Viaje> llegadas;
+    private ArrayList<Viaje> salidas;
 
     public Terminal(String nombre, Direccion direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
+        this.llegadas = new ArrayList<Viaje>();
+        this.salidas = new ArrayList<Viaje>();
     }
 
     public String getNombre() {
@@ -21,19 +28,19 @@ public class Terminal {
     }
 
     public void addLLegada(Viaje viaje) {
-        //Desarrollar
+        llegadas.add(viaje);
     }
 
     public void addSalida(Viaje viaje) {
-        //Desarrollar
+        salidas.add(viaje);
     }
 
     public Viaje[] getLlegadas() {
-        //Desarrollar
+        return llegadas.toArray(new Viaje[0]);
     }
 
     public Viaje[] getSalidas() {
-        //Desarrollar
+        return salidas.toArray(new Viaje[0]);
     }
 }
 
