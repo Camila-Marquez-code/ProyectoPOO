@@ -1,3 +1,4 @@
+//Marisol Yañez Borquez
 import java.util.ArrayList;
 public class Auxiliar extends Tripulante {
     private ArrayList<Viaje> viajes;
