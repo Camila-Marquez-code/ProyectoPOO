@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+public class Auxiliar extends Tripulante {
+    private ArrayList<Viaje> viajes;
+
+    public Auxiliar(IdPersona id, Nombre nom, Direccion dir) {
+        super(id, nom, dir);
+        viajes = new ArrayList<>();
+    }
+    @Override
+    public void addViaje(Viaje viaje) {
+        viajes.add(viaje);
+    }
+    @Override
+    public int getNroViajes() {
+        return viajes.size();
+    }
+}
