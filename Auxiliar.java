@@ -1,4 +1,5 @@
 //Marisol Yañez Borquez
+package modelo;
 import java.util.ArrayList;
 public class Auxiliar extends Tripulante {
     private ArrayList<Viaje> viajes;

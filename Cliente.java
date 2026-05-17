@@ -1,4 +1,5 @@
 //Marisol Yañez Borquez
+package modelo;
 import java.util.*;
 public class Cliente extends Persona {
     private String email;
