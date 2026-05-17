@@ -1,7 +1,7 @@
 //Tomás Meza
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.ArrayList;
 
 public class Venta {
     private String idDocumento;
