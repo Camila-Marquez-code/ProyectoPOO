@@ -13,7 +13,7 @@ public class Auxiliar extends Tripulante {
             viajes.add(viaje);
         }
     }
-    @Override
+
     public int getNroViajes() {
         return viajes.size();
     }
