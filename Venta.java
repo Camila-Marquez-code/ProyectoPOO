@@ -51,4 +51,47 @@ public class Venta {
         }
         return total;
     }
+    public int getMontoPagado() {
+        if (pago == null) {
+            return 0;
+        }
+        return pago.getMonto();
+    }
+
+    public boolean pagaMonto(long nroTarjeta) {
+        if (pago != null) {
+            return false;
+        }
+
+        int monto = getMonto();
+
+        if (nroTarjeta > 0) {
+            pago = new PagoTarjeta(monto, nroTarjeta);
+        } else {
+            pago = new PagoEfectivo(monto);
+        }
+
+        return true;
+    }
+
+    @Override
+    public boolean equals(Object otro) {
+        if (this == otro) {
+            return true;
+        }
+        if (otro == null ||
+                getClass() != otro.getClass()) {
+
+            return false;
+        }
+
+        Venta venta = (Venta) otro;
+        return idDocumento.equals(venta.idDocumento);
+    }
+    public String getTipoPago() {
+        if (pago == null) {
+            return "Sin pago";
+        }
+        return pago.getClass().getSimpleName();
+    }
 }
