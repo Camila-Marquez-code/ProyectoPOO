@@ -1,5 +1,5 @@
 //Camila Valeska Márquez Burgos
-
+package modelo;
 import java.util.ArrayList;
 
 public class Terminal {

@@ -1,4 +1,5 @@
 //Camila Valeska Márquez Burgos
+package modelo;
 public class Pasajero extends Persona {
     private Nombre nomContacto;
     private String fonoContacto;

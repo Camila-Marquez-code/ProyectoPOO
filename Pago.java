@@ -1,4 +1,5 @@
 //Camila Valeska Márquez Burgos
+package modelo;
 public class Pago {
     private int monto;
 

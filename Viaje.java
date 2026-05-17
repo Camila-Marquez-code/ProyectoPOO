@@ -1,8 +1,9 @@
 //Camila Valeska Márquez Burgos
+package modelo;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.time.LocalDateTime;
-import java.util.*;
+import java.time.LocalTime;
+import java.util.ArrayList;
 
 public class Viaje {
     private LocalDate fecha;
