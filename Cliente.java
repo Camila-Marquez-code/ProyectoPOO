@@ -1,6 +1,6 @@
-package modelo;
+//Juan José Henríquez Vergara
 
-//Tomás Meza
+package modelo;
 
 import utilidades.IdPersona;
 import utilidades.Nombre;

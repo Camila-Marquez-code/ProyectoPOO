@@ -1,3 +1,5 @@
+//Juan José Henríquez Vergara
+
 package controlador;
 
 import modelo.*;
@@ -38,7 +40,7 @@ public class ControladorEmpresas {
             bus.setMarca(marca);
             bus.setModelo(modelo);
 
-            emp.get().addBus(bus); // delegación correcta
+            emp.get().addBus(bus);
             buses.add(bus);
         }
     }

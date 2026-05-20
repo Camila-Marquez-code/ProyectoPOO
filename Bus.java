@@ -1,4 +1,6 @@
-package modelo;//Juan José Henríquez Vergara
+//Juan José Henríquez Vergara
+
+package modelo;
 import java.util.ArrayList;
 
 public class Bus {

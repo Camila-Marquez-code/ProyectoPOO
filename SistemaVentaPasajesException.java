@@ -1,3 +1,5 @@
+//Juan José Henríquez Vergara
+
 package excepciones;
 
 public class SistemaVentaPasajesException extends RuntimeException {
