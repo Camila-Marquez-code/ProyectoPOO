@@ -1,5 +1,7 @@
 //Tomás Meza
 
+package modelo;
+
 public class Conductor extends Tripulante {
 
     public Conductor(IdPersona id, Nombre nom, Direccion direccion) {
