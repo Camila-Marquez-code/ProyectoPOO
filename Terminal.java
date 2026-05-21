@@ -1,6 +1,7 @@
 //Camila Valeska Márquez Burgos
 package modelo;
 import java.util.ArrayList;
+import utilidades.*;
 
 public class Terminal {
     private String nombre;
@@ -43,4 +44,3 @@ public class Terminal {
         return salidas.toArray(new Viaje[0]);
     }
 }
-

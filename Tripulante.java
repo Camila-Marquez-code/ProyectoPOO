@@ -1,6 +1,7 @@
 //Camila Valeska Márquez Burgos
 package modelo;
 import java.util.ArrayList;
+import utilidades.*;
 
 public class Tripulante extends Persona {
     private Direccion direccion;
@@ -25,6 +26,6 @@ public class Tripulante extends Persona {
     }
 
     public int getNroViaje() {
-        return viaje.size();
+        return viajes.size();
     }
 }
