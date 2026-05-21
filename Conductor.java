@@ -2,19 +2,12 @@
 
 package modelo;
 
+import utilidades.*;
 public class Conductor extends Tripulante {
 
-    public Conductor(IdPersona id, Nombre nom, Direccion direccion) {
-        super(id, nom, direccion);
+    public Conductor(IdPersona idPersona, Nombre nombre, Direccion direccion) {
+        super(idPersona, nombre, direccion);
     }
 
-    @Override
-    public void addViaje(Viaje viaje) {
-        viajes.add(viaje);
-    }
-
-    @Override
-    public int getNroViajes() {
-        return viajes.size();
-    }
+    //Se excluye
 }

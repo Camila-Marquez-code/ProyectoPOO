@@ -2,17 +2,13 @@
 
 package vista;
 
-import controlador.SistemaVentaPasajes;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
-
-import controlador.ControladorEmpresas;
-import controlador.SistemaVentaPasajes;
-import modelo.TipoDocumento;
-import modelo.utilidades.*;
+import controlador.*;
+import modelo.*;
+import utilidades.*;
 
 public class UISVP {
     private static UISVP instancia;
