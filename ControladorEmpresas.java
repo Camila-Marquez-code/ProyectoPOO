@@ -7,8 +7,8 @@ import utilidades.Direccion;
 import utilidades.IdPersona;
 import utilidades.Nombre;
 import utilidades.Rut;
-
 import java.util.*;
+import utilidades.*;
 
 public class ControladorEmpresas {
 
@@ -40,7 +40,7 @@ public class ControladorEmpresas {
             bus.setMarca(marca);
             bus.setModelo(modelo);
 
-            emp.get().addBus(bus);
+            emp.get().addBus(bus); // delegación correcta
             buses.add(bus);
         }
     }
@@ -84,25 +84,25 @@ public class ControladorEmpresas {
         return new String[0];
     }
 
-    private Optional<Empresa> findEmpresa(Rut rut) {
+    protected Optional<Empresa> findEmpresa(Rut rut) {
         return empresas.stream()
                 .filter(e -> e.getRut().equals(rut))
                 .findFirst();
     }
 
-    private Optional<Terminal> findTerminal(String nombre) {
+    protected Optional<Terminal> findTerminal(String nombre) {
         return terminales.stream()
                 .filter(t -> t.getNombre().equals(nombre))
                 .findFirst();
     }
 
-    private Optional<Terminal> findTerminalPorComuna(String comuna) {
+    protected Optional<Terminal> findTerminalPorComuna(String comuna) {
         return terminales.stream()
                 .filter(t -> t.getDireccion().getComuna().equals(comuna))
                 .findFirst();
     }
 
-    private Optional<Bus> findBus(String patente) {
+    protected Optional<Bus> findBus(String patente) {
         return buses.stream()
                 .filter(b -> b.getPatente().equals(patente))
                 .findFirst();

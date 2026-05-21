@@ -1,6 +1,7 @@
 //Juan José Henríquez Vergara
 
 package modelo;
+
 import java.util.ArrayList;
 
 public class Bus {
