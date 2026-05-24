@@ -1,4 +1,8 @@
-//Tomás Meza
+//Juan Jose Henriquez Vergara
+
+package modelo;
+
+import utilidades.*;
 
 public class Persona {
 

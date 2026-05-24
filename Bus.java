@@ -1,4 +1,7 @@
-//Juan José Henríquez Vergara
+//Juan Jose Henriquez Vergara
+
+package modelo;
+
 import java.util.ArrayList;
 
 public class Bus {
@@ -40,6 +43,10 @@ public class Bus {
 
     public void addViaje(Viaje viaje) {
         viajes.add(viaje);
+    }
+
+    public Viaje[] getViajes() {
+        return viajes.toArray(new Viaje[0]);
     }
 
 }

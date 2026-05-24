@@ -1,4 +1,7 @@
-//Camila Márquez Burgos
+//Juan Jose Henriquez Vergara
+
+package modelo;
+
 public class Pasaje {
     private long numero;
     private int asiento;
