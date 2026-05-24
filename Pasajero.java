@@ -1,4 +1,7 @@
-//Camila Márquez Burgos
+//Camila Valeska Márquez Burgos
+package modelo;
+import utilidades.*;
+
 public class Pasajero extends Persona {
     private Nombre nomContacto;
     private String fonoContacto;
@@ -23,4 +26,3 @@ public class Pasajero extends Persona {
         this.fonoContacto = fonoContacto;
     }
 }
-
