@@ -1,4 +1,4 @@
-//Juan José Henríquez Vergara
+//Juan Jose Henriquez Vergara
 
 package modelo;
 
