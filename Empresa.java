@@ -52,7 +52,7 @@ public class Empresa {
 
 
     public boolean addConductor(IdPersona id, Nombre nom, Direccion dir){
-        if (id != null && nom != null) {
+        if (id != null && nom != null && findTripulante(id) == null) {
             Conductor nuevoConductor = new Conductor(id, nom, dir);
             this.listaTripulantes.add(nuevoConductor);
             return true;
@@ -61,7 +61,7 @@ public class Empresa {
     }
 
     public boolean addAuxiliar (IdPersona id, Nombre nom, Direccion dir){
-        if (id != null && nom != null) {
+        if (id != null && nom != null && findTripulante(id) == null) {
             Auxiliar nuevoAuxiliar = new Auxiliar(id, nom, dir);
             this.listaTripulantes.add(nuevoAuxiliar);
             return true;
@@ -75,6 +75,25 @@ public class Empresa {
     }
 
     public Venta[] getVentas() {
-        return listaVentas.toArray(new Venta[0]);
+        ArrayList<Venta> ventas = new ArrayList<>();
+        for (Bus bus : listaBuses) {
+            for (Viaje viaje : bus.getViajes()) {
+                for (Venta venta : viaje.getVentas()) {
+                    if (!ventas.contains(venta)) {
+                        ventas.add(venta);
+                    }
+                }
+            }
+        }
+        return ventas.toArray(new Venta[0]);
+    }
+
+    public Tripulante findTripulante(IdPersona id) {
+        for (Tripulante tripulante : listaTripulantes) {
+            if (tripulante.getIdPersona().equals(id)) {
+                return tripulante;
+            }
+        }
+        return null;
     }
 }

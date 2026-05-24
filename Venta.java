@@ -11,6 +11,7 @@ public class Venta {
     private LocalDate fecha;
     private Cliente cliente;
     private ArrayList<Pasaje> pasajes;
+    private Pago pago;
 
     public Venta(String idDocumento, TipoDocumento tipo, LocalDate fecha, Cliente cliente) {
         this.idDocumento = idDocumento;
@@ -18,6 +19,7 @@ public class Venta {
         this.fecha = fecha;
         this.cliente = cliente;
         this.pasajes = new ArrayList<Pasaje>();
+        cliente.addVenta(this);
     }
 
     public String getIdDocumento() {
@@ -76,6 +78,14 @@ public class Venta {
         return true;
     }
 
+    public boolean pagaMonto() {
+        if (pago != null) {
+            return false;
+        }
+        pago = new PagoEfectivo(getMonto());
+        return true;
+    }
+
     @Override
     public boolean equals(Object otro) {
         if (this == otro) {
@@ -92,7 +102,7 @@ public class Venta {
     }
     public String getTipoPago() {
         if (pago == null) {
-            return "Sin pago";
+            return null;
         }
         return pago.getClass().getSimpleName();
     }
