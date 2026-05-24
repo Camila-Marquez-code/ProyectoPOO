@@ -1,4 +1,7 @@
-//Juan José Henríquez Vergara
+//Tomás Meza
+
+package utilidades;
+
 public class Rut implements IdPersona {
     private int numero;
     private char dv;
